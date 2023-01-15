@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc; 
 
-namespace WebUI.Controllers
-{
-    public class HomeController : Controller
-    { 
-        public IActionResult Index()
-        {
-            return View();
-        } 
-    }
+namespace WebUI.Controllers;
+
+public class HomeController : Controller
+{ 
+    public IActionResult Index()
+    {
+        return View();
+    } 
 }
