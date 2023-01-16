@@ -17,7 +17,7 @@ public class ProducersController : Controller
     {
         var allProducers = await _context.Producers.ToListAsync();
 
-        return View();
+        return View(allProducers);
     }
 }
 

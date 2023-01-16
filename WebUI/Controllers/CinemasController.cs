@@ -16,7 +16,7 @@ public class CinemasController : Controller
     {
         var allCinemas = await _context.Cinemas.ToListAsync();
 
-        return View();
+        return View(allCinemas);
     }
 }
 
