@@ -4,6 +4,7 @@
     ViewData["Title"] = "List of Movies";
 }
 
+<br />
 <div class="row">
     @foreach (var item in Model)
     {
@@ -26,7 +27,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="@item.ImageUrl" width="100%" alt="@item.Name">
+                        <img class="img-movies" src="~/images/movies/@item.ImageUrl" width="100%" alt="@item.Name">
                     </div>
                     <div class="col-md-6">
                         <div class="card-body">

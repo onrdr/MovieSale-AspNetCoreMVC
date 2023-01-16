@@ -16,3 +16,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.td-actions{
+    width: 287px;
+}
+
+.img-movies{
+    height: 300px;
+    width: 200px;
+}

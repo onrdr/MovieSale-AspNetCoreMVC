@@ -6,7 +6,7 @@
 
 <div class="row">
     <div class="col-md-8 offset-md-2">
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover table-responsive">
             <thead>
                 <tr class="text-center">
                     <th>Profile Picture</th>
@@ -20,11 +20,23 @@
                 {
                     <tr>
                         <td class="align-middle">
-                            <img class="rounded-circle" src="@item.Logo" alt="@item.Name" style="max-width: 100px" />
+                            <img class="rounded-circle" src="~/images/cinemas/@item.Logo" alt="@item.Name" style="max-width: 100px" />
                         </td>
                         <td class="align-middle">@item.Name</td>
-                        <td class="align-middle">@item.Description</td>
-                        <td class="align-middle">
+
+                        @if (item.Description.Length >= 35)
+                        {
+                            <td class="align-middle">
+                                @item.Description.Substring(0, 35)...
+                            </td>
+                        }
+                        else
+                        {
+                            <td class="align-middle">
+                                @item.Description...
+                            </td>
+                        }
+                        <td class="align-middle td-actions">
                             <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a> |
                             <a class="btn btn-outline-info"><i class="bi bi-eye"></i>Details</a> |
                             <a class="btn btn-danger"><i class="bi bi-trash"></i>Delete</a>

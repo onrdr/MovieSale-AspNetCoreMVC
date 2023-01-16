@@ -7,5 +7,7 @@ public enum MovieCategory
     Drama, 
     Documentary,
     Cartoon,
-    Horror
+    Crime,
+    Horror,
+    Romantic
 }
