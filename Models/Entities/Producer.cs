@@ -1,6 +1,8 @@
-﻿namespace Models.Entities;
+﻿using Models.Entities.Abstract;
 
-public class Producer
+namespace Models.Entities;
+
+public class Producer : IEntityBase
 {
     public int Id { get; set; }
     public string FullName { get; set; }
