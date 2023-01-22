@@ -1,6 +1,8 @@
-﻿namespace Models.Entities;
+﻿using Models.Entities.Abstract;
 
-public class Actor
+namespace Models.Entities;
+
+public class Actor : IEntityBase
 {
     public int Id { get; set; }
     public string FullName { get; set; }

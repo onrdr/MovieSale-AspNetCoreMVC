@@ -1,4 +1,4 @@
-﻿using DataAccess;
+﻿using DataAccess.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

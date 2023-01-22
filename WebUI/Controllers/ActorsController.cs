@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
+﻿using Microsoft.AspNetCore.Mvc; 
 using Models.Entities;
 using Models.ViewModels;
 using Service.Abstract;
@@ -8,9 +7,9 @@ namespace WebUI.Controllers;
 
 public class ActorsController : Controller
 {
-    private readonly IActorService _service;
+    private readonly IActorsService _service;
 
-    public ActorsController(IActorService service)
+    public ActorsController(IActorsService service)
     {
         _service = service;
     }
@@ -76,11 +75,11 @@ public class ActorsController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(Actor actor, int id)
+    public async Task<IActionResult> Edit(Actor actor)
     {
         if (ModelState.IsValid)
         {
-            await _service.UpdateAsync(actor.Id, actor);
+            await _service.UpdateAsync(actor);
 
             return RedirectToAction(nameof(Index));
         }

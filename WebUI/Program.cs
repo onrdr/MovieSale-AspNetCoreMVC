@@ -1,4 +1,4 @@
-using DataAccess;
+using DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Service.Abstract;
 using Service.Concrete;
@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
 
-builder.Services.AddScoped<IActorService, ActorService>();
+builder.Services.AddScoped<IActorsService, ActorsService>();
 
 var app = builder.Build();
 
