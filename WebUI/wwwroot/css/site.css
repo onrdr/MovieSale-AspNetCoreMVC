@@ -18,10 +18,32 @@ body {
 }
 
 .td-actions{
-    width: 287px;
+    width: 301px;
 }
 
 .img-movies{
     height: 300px;
     width: 200px;
+}
+
+.footer-correct {
+    bottom: 0px;
+    width: 100%; 
+    position: fixed; 
+}
+
+.btn-addActor{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+}
+
+.img-scale {
+    max-width: 100px;
+}
+
+.img-actordetails-dimensions{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px; 
 }

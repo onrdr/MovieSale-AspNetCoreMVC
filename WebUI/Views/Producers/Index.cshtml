@@ -2,10 +2,11 @@
 
 @{
     ViewData["Title"] = "List of Producers";
-}  
+}
 
 <div class="row">
     <div class="col-md-8 offset-md-2">
+        <h1 class="text-info mb-4">List of Producers</h1>
         <table class="table table-bordered table-hover">
             <thead>
                 <tr class="text-center">
@@ -20,7 +21,7 @@
                 {
                     <tr>
                         <td class="align-middle">
-                            <img class="rounded-circle" src="~/images/producers/@item.ProfilePictureUrl" alt="@item.FullName" style="max-width: 100px" />
+                            <img class="rounded-circle img-scale" src="~/images/producers/@item.ProfilePictureUrl" alt="@item.FullName" />
                         </td>
                         <td class="align-middle">@item.FullName</td>
                         <td class="align-middle">@item.Bio</td>

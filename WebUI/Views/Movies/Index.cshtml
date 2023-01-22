@@ -4,6 +4,7 @@
     ViewData["Title"] = "List of Movies";
 }
 
+<h1 class="text-info mb-2">List of Movies</h1>
 <br />
 <div class="row">
     @foreach (var item in Model)
@@ -12,7 +13,7 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-12">
-                        <div class="card-header text-white bg-info">
+                        <div class="card-header text-info bg-light">
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.Name
@@ -27,7 +28,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img class="img-movies" src="~/images/movies/@item.ImageUrl" width="100%" alt="@item.Name">
+                        <img class="img-movies" src="~/images/movies/@item.ImageUrl"  alt="@item.Name">
                     </div>
                     <div class="col-md-6">
                         <div class="card-body">
