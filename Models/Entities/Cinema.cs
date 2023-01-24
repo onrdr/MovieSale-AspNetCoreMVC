@@ -1,6 +1,8 @@
-﻿namespace Models.Entities;
+﻿using Models.Entities.Abstract;
 
-public class Cinema
+namespace Models.Entities;
+
+public class Cinema : IEntityBase
 {
     public int Id { get; set; }
     public string Name { get; set; }

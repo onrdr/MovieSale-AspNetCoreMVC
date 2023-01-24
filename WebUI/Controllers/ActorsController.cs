@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc; 
+﻿using Microsoft.AspNetCore.Mvc;
 using Models.Entities;
 using Models.ViewModels;
 using Service.Abstract;
@@ -52,12 +52,7 @@ public class ActorsController : Controller
     {
         var actorDetails = await _service.GetByIdAsync(id);
 
-        if (actorDetails == null)
-        {
-            return View("NotFound");
-        }
-
-        return View(actorDetails);
+        return actorDetails == null ? View(nameof(NotFound)) : View(actorDetails);
     }
     #endregion
 
@@ -66,12 +61,7 @@ public class ActorsController : Controller
     {
         var actorDetails = await _service.GetByIdAsync(id);
 
-        if (actorDetails == null)
-        {
-            return View("NotFound");
-        }
-
-        return View(actorDetails);
+        return actorDetails == null ? View(nameof(NotFound)) : View(actorDetails);
     }
 
     [HttpPost]
@@ -93,12 +83,7 @@ public class ActorsController : Controller
     {
         var actorDetails = await _service.GetByIdAsync(id);
 
-        if (actorDetails == null)
-        {
-            return View("NotFound");
-        }
-
-        return View(actorDetails);
+        return actorDetails == null ? View(nameof(NotFound)) : View(actorDetails);
     }
 
     [HttpPost, ActionName("Delete")]
@@ -108,7 +93,7 @@ public class ActorsController : Controller
 
         if (actorDetails == null)
         {
-            return View("NotFound");
+            return View(nameof(NotFound));
         }
 
         await _service.DeleteAsync(id);

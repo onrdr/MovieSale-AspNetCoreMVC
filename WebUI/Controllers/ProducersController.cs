@@ -52,12 +52,7 @@ public class ProducersController : Controller
     {
         var producerDetails = await _service.GetByIdAsync(id);
 
-        if (producerDetails == null)
-        {
-            return View("NotFound");
-        }
-
-        return View(producerDetails);
+        return producerDetails == null ? View(nameof(NotFound)) : View(producerDetails);
     }
     #endregion
 
@@ -66,17 +61,12 @@ public class ProducersController : Controller
     {
         var producerDetails = await _service.GetByIdAsync(id);
 
-        if (producerDetails == null)
-        {
-            return View("NotFound");
-        }
-
-        return View(producerDetails);
+        return producerDetails == null ? View(nameof(NotFound)) : View(producerDetails);
     }
 
     [HttpPost]
     public async Task<IActionResult> Edit(Producer producer)
-    { 
+    {
         if (ModelState.IsValid)
         {
             await _service.UpdateAsync(producer);
@@ -93,12 +83,7 @@ public class ProducersController : Controller
     {
         var producerDetails = await _service.GetByIdAsync(id);
 
-        if (producerDetails == null)
-        {
-            return View("NotFound");
-        }
-
-        return View(producerDetails);
+        return producerDetails == null ? View(nameof(NotFound)) : View(producerDetails);
     }
 
     [HttpPost, ActionName("Delete")]
@@ -108,7 +93,7 @@ public class ProducersController : Controller
 
         if (producerDetails == null)
         {
-            return View("NotFound");
+            return View(nameof(NotFound));
         }
 
         await _service.DeleteAsync(id);

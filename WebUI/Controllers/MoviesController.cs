@@ -1,21 +1,19 @@
-﻿using DataAccess.Data;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Service.Abstract;
 
 namespace WebUI.Controllers;
 
 public class MoviesController : Controller
 {
-    private readonly AppDbContext _context;
+    private readonly IMoviesService _service;
 
-    public MoviesController(AppDbContext context)
+    public MoviesController(IMoviesService service)
     {
-        _context = context;
+        _service = service;
     }
     public async Task<ActionResult> Index()
     {
-        var allMovies = await _context.Movies.Include(m => m.Cinema)
-            .OrderBy(m => m.Name).ToListAsync();
+        var allMovies = await _service.GetAllAsync(m => m.Cinema); 
 
         return View(allMovies);
     }
