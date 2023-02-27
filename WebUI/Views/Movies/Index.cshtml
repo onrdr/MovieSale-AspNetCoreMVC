@@ -23,12 +23,15 @@
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
                                     }
+                                    <a class="text-info float-right" asp-action="Edit" asp-route-id="@item.Id">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
                                 </h5>
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img class="img-movies" src="~/images/movies/@item.ImageUrl"  alt="@item.Name">
+                        <img class="img-movies" src="~/images/movies/@item.ImageUrl" alt="@item.Name">
                     </div>
                     <div class="col-md-6">
                         <div class="card-body">
@@ -75,5 +78,7 @@
         </div>
     }
 </div>
+
+@await Html.PartialAsync("_CreateItem", "Movies") 
 
 

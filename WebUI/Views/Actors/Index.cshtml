@@ -37,8 +37,4 @@
     </div>
 </div>
 
-<div class="text-white offset-2 mt-2 mb-4 btn-addActor">
-    <a asp-controller="Actors" asp-action="Create" class="btn btn-success">
-        <i class="bi bi-plus-circle"></i> Add New Actor
-    </a>
-</div>
+@await Html.PartialAsync("_CreateItem", "Actors")

@@ -1,8 +1,9 @@
-﻿using Models.Enums;
+﻿using Models.Entities.Abstract;
+using Models.Enums;
 
 namespace Models.Entities;
 
-public class Movie
+public class Movie : IEntityBase
 {
     public int Id { get; set; }
     public string Name { get; set; }
