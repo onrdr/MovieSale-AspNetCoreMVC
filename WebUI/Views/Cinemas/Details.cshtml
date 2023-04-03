@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="form-group text-center">
-                    <img class="border-info rounded-circle" id="CinemaLogoPreview" />
+                    <img class="border-info rounded-circle img-scale" id="CinemaLogoPreview" />
                 </div>
                 <div class="form-group mb-3">
                     <label asp-for="Logo" class="control-label"></label>
@@ -25,12 +25,12 @@
                 <div class="form-group mb-3 border-danger">
                     <p>@Model.Description</p>
                 </div>
-                <div class="form-group"> 
-                    <a class="btn btn-outline-primary" asp-action="Index">Show All</a>
+                <div class="form-group">
                     @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                     {
-                        <a class="btn btn-outline-success float-end" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+                        <a class="btn btn-outline-success " asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
                     }
+                    <a class="btn btn-outline-primary float-end" asp-action="Index">Show All</a>
                 </div>
             </div>
         </div>
@@ -40,9 +40,8 @@
 @section Scripts{
     <script>
         $(document).ready(function () {
-            let image = document.getElementById('CinemaLogoPreview');
-            image.classList.add("img-actordetails-dimensions");
-            image.src = "/images/cinemas/" + $("#Logo").val();
-        });
+            var output = document.getElementById('CinemaLogoPreview');
+            output.src = $("#Logo").val();
+        })
     </script>
 }

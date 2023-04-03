@@ -14,7 +14,7 @@
                 <form asp-action="Create">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group text-center">
-                        <img class="border-info rounded-circle" id="ProfilePicturePreview" />
+                        <img class="border-info rounded-circle img-scale" id="ProfilePicturePreview" />
                     </div>
                     <div class="form-group mb-2">
                         <label asp-for="ProfilePictureUrl" class="control-label"></label>
@@ -44,15 +44,13 @@
 @section Scripts{
     <partial name="_ValidationScriptsPartial" />
     <script>
-        let image = document.getElementById('ProfilePicturePreview');
-        image.classList.add("img-actordetails-dimensions");
         $(document).ready(function () {
-            image.src = "/images/actors/" + $("#ProfilePictureUrl").val();
-        });
-
+            var output = document.getElementById('ProfilePicturePreview');
+            output.src = $("#ProfilePictureURL").val();
+        })
         $("#ProfilePictureUrl").on("change", function () {
-
-            image.src = "/images/actors/" + $(this).val();
-        });
-    </script> 
+            var output = document.getElementById('ProfilePicturePreview');
+            output.src = $(this).val();
+        })
+    </script>
 }

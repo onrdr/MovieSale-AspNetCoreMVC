@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <img class="img-movies" src="~/images/movies/@Model.ImageUrl" alt="@Model.Name">
+                    <img class="img-movies" src="@Model.ImageUrl" alt="@Model.Name">
                 </div>
                 <div class="col-md-7">
                     <div class="card-body">
@@ -67,7 +67,7 @@
                                 @foreach (var item in Model.Actors_Movies)
                                 {
                                     <div class="col text-center">
-                                        <img class="border-info rounded-circle img-scale" src="~/images/actors/@item.Actor.ProfilePictureUrl"/>
+                                        <img class="border-info rounded-circle img-scale" src="@item.Actor.ProfilePictureUrl"/>
                                         <br />
                                         <a asp-controller="Actors" asp-action="Details" asp-route-id="@item.Actor.Id">@item.Actor.FullName</a>
                                     </div>

@@ -1,5 +1,4 @@
-﻿
-using Core.Repository.Abstract;
+﻿using Core.Repository.Abstract;
 using Models.Entities;
 
 namespace Service.Abstract;

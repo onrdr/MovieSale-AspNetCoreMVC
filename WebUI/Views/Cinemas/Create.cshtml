@@ -14,7 +14,7 @@
                 <form asp-action="Create">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group text-center">
-                        <img class="border-info rounded-circle" id="CinemaLogoPreview" />
+                        <img class="border-info rounded-circle img-scale" id="CinemaLogoPreview" />
                     </div>
                     <div class="form-group mb-2">
                         <label asp-for="Logo" class="control-label"></label>
@@ -44,14 +44,13 @@
 @section Scripts{
     <partial name="_ValidationScriptsPartial" />
     <script>
-        let image = document.getElementById('CinemaLogoPreview');
-        image.classList.add("img-actordetails-dimensions");
         $(document).ready(function () {
-            image.src = "/images/cinemas/" + $("#Logo").val();
-        });
-
+            var output = document.getElementById('CinemaLogoPreview');
+            output.src = $("#Logo").val();
+        })
         $("#Logo").on("change", function () {
-            image.src = "/images/cinemas/" + $(this).val();
-        });
+            var output = document.getElementById('CinemaLogoPreview');
+            output.src = $(this).val();
+        })
     </script>
 }
