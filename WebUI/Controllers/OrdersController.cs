@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Models.Identity;
 using Models.ViewModels; 
 using Service.Abstract; 
 using System.Security.Claims;
 
 namespace WebUI.Controllers;
 
+[Authorize]
 public class OrdersController : Controller
 {
     private readonly IMoviesService _moviesService;

@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Models.Entities;
+using Models.Identity;
 using Models.ViewModels;
 using Service.Abstract;
+
 namespace WebUI.Controllers;
 
+[Authorize(Roles = UserRoles.Admin)]
 public class CinemasController : Controller
 {
     private readonly ICinemasService _service;
@@ -41,6 +45,8 @@ public class CinemasController : Controller
     #endregion
 
     #region Read 
+
+    [AllowAnonymous]
     public async Task<ActionResult> Index()
     {
         var allCinemas = await _service.GetAllAsync();
@@ -48,6 +54,7 @@ public class CinemasController : Controller
         return View(allCinemas);
     }
 
+    [AllowAnonymous]
     public async Task<IActionResult> Details(int id)
     {
         var cinemaDetails = await _service.GetByIdAsync(id);

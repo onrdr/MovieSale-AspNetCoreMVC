@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Models.Entities;
+using Models.Identity;
 using Models.ViewModels;
 using Service.Abstract;
 
 namespace WebUI.Controllers;
 
+[Authorize(Roles = UserRoles.Admin)]
 public class ActorsController : Controller
 {
     private readonly IActorsService _service;
@@ -42,18 +45,23 @@ public class ActorsController : Controller
     #endregion
 
     #region Read
+
+    [AllowAnonymous]
     public async Task<IActionResult> Index()
     {
         var allActors = await _service.GetAllAsync();
 
         return View(allActors);
     }
+
+    [AllowAnonymous]
     public async Task<IActionResult> Details(int id)
     {
         var actorDetails = await _service.GetByIdAsync(id);
 
         return actorDetails == null ? View(nameof(NotFound)) : View(actorDetails);
     }
+
     #endregion
 
     #region Update

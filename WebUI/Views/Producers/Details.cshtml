@@ -30,8 +30,11 @@
                     <span asp-validation-for="Bio" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <a class="btn btn-outline-success" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
-                    <a class="btn btn-outline-primary float-end" asp-action="Index">Show All</a>
+                    <a class="btn btn-outline-primary" asp-action="Index">Show All</a>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <a class="btn btn-outline-success float-end" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+                    }
                 </div>
             </div>
         </div>
@@ -39,8 +42,7 @@
 </div>
 
 @section Scripts{
-    <script>
-
+    <script>    
         $(document).ready(function () {
             let image = document.getElementById('ProfilePicturePreview');
             image.classList.add("img-actordetails-dimensions");

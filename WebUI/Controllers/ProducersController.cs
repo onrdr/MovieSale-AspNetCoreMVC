@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Models.Entities;
+using Models.Identity;
 using Models.ViewModels;
 using Service.Abstract;
+
 namespace WebUI.Controllers;
 
+[Authorize(Roles = UserRoles.Admin)]
 public class ProducersController : Controller
 {
     private readonly IProducersService _service;
@@ -41,6 +45,8 @@ public class ProducersController : Controller
     #endregion 
 
     #region Read
+
+    [AllowAnonymous]
     public async Task<IActionResult> Index()
     {
         var allProducers = await _service.GetAllAsync();
@@ -48,6 +54,7 @@ public class ProducersController : Controller
         return View(allProducers);
     }
 
+    [AllowAnonymous]
     public async Task<IActionResult> Details(int id)
     {
         var producerDetails = await _service.GetByIdAsync(id);

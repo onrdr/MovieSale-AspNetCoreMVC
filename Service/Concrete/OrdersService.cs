@@ -17,9 +17,8 @@ public class OrdersService : IOrdersService
     {
         var orders = await _context.Orders
             .Include(o => o.OrderItems)
-            .ThenInclude(o => o.Movie)
-            .Where(o => o.UserId == userId).ToListAsync();
-            //.Include(o => o.User).ToListAsync();
+            .ThenInclude(i => i.Movie) 
+            .Include(o => o.User).ToListAsync();
 
         if (userRole != "Admin") 
             orders = orders.Where(o => o.UserId == userId).ToList(); 

@@ -1,8 +1,11 @@
 ﻿@model string
 
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <div class="text-white offset-2 mt-2 mb-4 btn-addItem">
+        <a asp-controller="@Model" asp-action="Create" class="btn btn-success">
+            <i class="bi bi-plus-circle"></i> Add New @Model.Substring(0, Model.Length - 1)
+        </a>
+    </div>
 
-<div class="text-white offset-2 mt-2 mb-4 btn-addItem">
-    <a asp-controller="@Model" asp-action="Create" class="btn btn-success">
-        <i class="bi bi-plus-circle"></i> Add New @Model.Substring(0, Model.Length-1)
-    </a>
-</div>
+}
