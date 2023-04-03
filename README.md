@@ -58,7 +58,7 @@ localhost:5000
 ### But if you want to use another database from scratch, Just change the connection string in appsettings.json and make other settings in Program.cs 
 ### There is a Data Seeder class in program.cs as you will see and it will automatically seed the data to the DB just for the first time you run the project. 
 
-### Here are login credentials one for admin and one for normal user for you to try the applicatio
+### Here are login credentials one for admin and one for normal user for you to try the application
 Email: admin@etickets.com
 Password: @Admin1*
 
