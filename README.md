@@ -51,7 +51,9 @@ To run this application, you will need to have .NET and Docker installed on your
 ## Notes
 ### The Url should be in this format : localhost:5000
 
-### The API uses SQLite as its database, so no additional setup is required for the database.
+### The project uses SQLite as its database and has initial data inside it, so no additional setup is required for the database. 
+### But if you want to use another database from scratch, Just change the connection string in appsettings.json and make other settings in Program.cs 
+### There is a Data Seeder class in program.cs as you will see and it will automatically seed the data to the DB just for the first time you run the project. 
 
 ### You should now be able to run the project on your local machine now.   
  
