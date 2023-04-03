@@ -45,7 +45,7 @@ To run this application, you will need to have .NET and Docker installed on your
 
 ### 5- Start the docker container
 ```
- docker run -it --rm -p 5000:80 movie-app
+ docker run -dp 5000:80 movie-app
 ```
 
 ### 6- Go to the adress below
