@@ -86,7 +86,6 @@ public class AppDbInitializer
             {
                 new Actor()
                 {
-                    Id = 1,
                     FullName = "Kemal Sunal",
                     Bio = "This is the Bio of Kemal Sunal",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U3MRU.webp"
@@ -94,84 +93,72 @@ public class AppDbInitializer
                 },
                 new Actor()
                 {
-                    Id = 2,
                     FullName = "Tarık Akan",
                     Bio = "This is the Bio of the Tarık Akan",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U39lI.jpg"
                 },
                 new Actor()
                 {
-                    Id = 3,
                     FullName = "Haluk Bilginer",
                     Bio = "This is the Bio of the Haluk Bilginer",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U3UNb.jpg"
                 },
                 new Actor()
                 {
-                    Id = 5,
                     FullName = "Şener Şen",
                     Bio = "This is the Bio of the Şener Şen",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U3ki7.jpg"
                 },
                 new Actor()
                 {
-                    Id = 1004,
                     FullName = "Münir Özkul",
                     Bio = "This is the Bio of the Münir Özkul",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U3ynA.jpg"
                 },
                 new Actor()
                 {
-                    Id = 1005,
                     FullName = "Adile Naşit",
                     Bio = "This is the Bio of the Adile Naşit",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U3aRx.jpg"
                 },
                 new Actor()
                 {
-                    Id = 1006,
                     FullName = "Ayşen Gruda",
                     Bio = "This is the Bio of the Ayşen Gruda",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U3lpJ.jpg"
                 },
                 new Actor()
                 {
-                    Id = 1014,
                     FullName = "Halit Akçatepe",
                     Bio = "This is the Bio of the Halit Akçatepe",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U3vhi.jpg"
                 },
                 new Actor()
                 {
-                    Id = 1017,
                     FullName = "İlyas Salman",
                     Bio = "This is the Bio of the İlyas Salman",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U3YoM.jpg"
                 },
                 new Actor()
                 {
-                    Id = 1018,
                     FullName = "Kadir İnanır",
                     Bio = "This is the Bio of the Kadir İnanır",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U3m41.jpg"
                 },
                 new Actor()
                 {
-                    Id = 1019,
                     FullName = "Metin Akpınar",
                     Bio = "This is the Bio of the Metin Akpınar",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U3dXX.jpg"
                 },
                 new Actor()
                 {
-                    Id = 1021,
                     FullName = "Türkan Şoray",
                     Bio = "This is the Bio of the Türkan Şoray",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U36vV.jpg"
                 },
                 new Actor()
                 {
-                    Id = 1022,
                     FullName = "Zeki Alasya",
                     Bio = "This is the Bio of the Zeki Alasya",
                     ProfilePictureUrl = "https://imgtr.ee/images/2023/04/03/U3Lxl.jpg"
@@ -244,7 +231,6 @@ public class AppDbInitializer
             {
                 new Movie()
                 {
-                    Id = 1,
                     Name = "Kış Uykusu",
                     Description = "This is the Kış Uykusu movie description",
                     Price = 39.50,
@@ -252,129 +238,119 @@ public class AppDbInitializer
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
                     CinemaId = 3,
-                    ProducerId = 3,
-                    MovieCategory = MovieCategory.Documentary
+                    ProducerId = 1,
+                    MovieCategory = MovieCategory.Drama
                 },
                 new Movie()
                 {
-                    Id = 2,
                     Name = "Süt Kardeşler",
                     Description = "This is the Süt Kardeşler movie description",
                     Price = 39.50,
                     ImageUrl = "https://i.ibb.co/B2wCDp7/s-t-kerde-ler.png",
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
-                    CinemaId = 4,
-                    ProducerId = 4,
-                    MovieCategory = MovieCategory.Horror
+                    CinemaId = 1,
+                    ProducerId = 3,
+                    MovieCategory = MovieCategory.Comedy
                 },
                 new Movie()
                 {
-                    Id = 5,
                     Name = "Yol",
                     Description = "This is the Yol movie description",
                     Price = 29.50,
                     ImageUrl = "https://i.ibb.co/Z2y01DS/yol.jpg",
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
-                    CinemaId = 1,
-                    ProducerId = 1,
-                    MovieCategory = MovieCategory.Action
+                    CinemaId = 2,
+                    ProducerId = 2,
+                    MovieCategory = MovieCategory.Drama
                 },
                 new Movie()
                 {
-                    Id = 6,
                     Name = "Neşeli Günler",
                     Description = "This is the Neşeli Günler movie description",
                     Price = 39.50,
                     ImageUrl = "https://i.ibb.co/m8kNyzQ/ne-eli-g-nler.jpg",
                      StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
-                    CinemaId = 1,
-                    ProducerId = 2,
-                    MovieCategory = MovieCategory.Documentary
+                    CinemaId = 2,
+                    ProducerId = 4,
+                    MovieCategory = MovieCategory.Comedy
                 },
                 new Movie()
-                {   
-                    Id = 1003,
+                {
                     Name = "Köyden İndim Şehire",
                     Description = "This is the Köyden İndim Şehire movie description",
                     Price = 39.50,
                     ImageUrl = "https://i.ibb.co/WvW1HtB/k-yden-indim-ehre.jpg",
                      StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
-                    CinemaId = 1,
+                    CinemaId = 4,
                     ProducerId = 3,
-                    MovieCategory = MovieCategory.Cartoon
+                    MovieCategory = MovieCategory.Comedy
                 },
                 new Movie()
                 {
-                    Id = 1004,
                     Name = "Selvi Boylum Al Yazmalım",
                     Description = "This is the Selvi Boylum Al Yazmalım movie description",
                     Price = 39.50,
                     ImageUrl = "https://i.ibb.co/hZT9FHz/selvi-boylum.jpg",
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
-                    CinemaId = 1,
+                    CinemaId = 4,
                     ProducerId = 5,
-                    MovieCategory = MovieCategory.Drama
+                    MovieCategory = MovieCategory.Romantic
                 },
                 new Movie()
                 {
-                    Id = 1005,
                     Name = "Çöpçüler Kralı",
                     Description = "This is the Çöpçüler Kralı movie description",
                     Price = 39.50,
                     ImageUrl = "https://i.ibb.co/zVLfb4c/p-ler-kral.jpg",
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
-                    CinemaId = 1,
-                    ProducerId = 5,
-                    MovieCategory = MovieCategory.Drama
+                    CinemaId = 5,
+                    ProducerId = 6,
+                    MovieCategory = MovieCategory.Romantic
                 },
                 new Movie()
                 {
-                    Id = 1006,
                     Name = "Gülen Gözler",
                     Description = "This is the Gülen Gözler movie description",
                     Price = 39.50,
                     ImageUrl = "https://i.ibb.co/vkZw8Js/g-len-g-zler.jpg",
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
-                    CinemaId = 1,
-                    ProducerId = 5,
+                    CinemaId = 3,
+                    ProducerId = 3,
                     MovieCategory = MovieCategory.Drama
                 },
                 new Movie()
                 {
-                    Id = 1007,
                     Name = "Bizim Aile",
                     Description = "This is the Bizim Aile movie description",
                     Price = 39.50,
                     ImageUrl = "https://i.ibb.co/GQhS9v8/bizim-aile.jpg",
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
-                    CinemaId = 1,
-                    ProducerId = 5,
+                    CinemaId = 4,
+                    ProducerId = 7,
                     MovieCategory = MovieCategory.Drama
                 },
                 new Movie()
                 {
-                    Id =1008,
                     Name = "Mavi Boncuk",
                     Description = "This is the Mavi Boncuk movie description",
                     Price = 39.50,
                     ImageUrl = "https://i.ibb.co/rK9NXV2/mavi-boncuk.jpg",
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
-                    CinemaId = 1,
-                    ProducerId = 5,
-                    MovieCategory = MovieCategory.Drama
+                    CinemaId = 5,
+                    ProducerId = 3,
+                    MovieCategory = MovieCategory.Comedy
                 },
                 new Movie()
                 {
-                    Id = 1009,
                     Name = "Canım Kardeşim",
                     Description = "This is the Canım Kardeşim movie description",
                     Price = 39.50,
@@ -382,38 +358,35 @@ public class AppDbInitializer
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
                     CinemaId = 1,
-                    ProducerId = 5,
+                    ProducerId = 3,
                     MovieCategory = MovieCategory.Drama
                 },
                 new Movie()
                 {
-                    Id = 1010,
                     Name = "Hababam Sınıfı",
                     Description = "This is the Hababam Sınıfı movie description",
                     Price = 39.50,
                     ImageUrl = "https://i.ibb.co/vLQhRWJ/hababam-s-n-f.jpg",
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
-                    CinemaId = 1,
-                    ProducerId = 5,
-                    MovieCategory = MovieCategory.Drama
+                    CinemaId = 3,
+                    ProducerId = 3,
+                    MovieCategory = MovieCategory.Comedy
                 },
                 new Movie()
                 {
-                    Id = 1011,
                     Name = "Tosun Paşa",
                     Description = "This is the Tosun Paşa movie description",
                     Price = 39.50,
                     ImageUrl = "https://i.ibb.co/7knQ0dH/tosun-pa-a.jpg",
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
-                    CinemaId = 1,
-                    ProducerId = 5,
-                    MovieCategory = MovieCategory.Drama
+                    CinemaId = 5,
+                    ProducerId = 8,
+                    MovieCategory = MovieCategory.Comedy
                 },
                 new Movie()
                 {
-                    Id = 1012,
                     Name = "Şabanoğlu Şaban",
                     Description = "This is the Şabanoğlu Şaban movie description",
                     Price = 39.50,
@@ -421,12 +394,11 @@ public class AppDbInitializer
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
                     CinemaId = 1,
-                    ProducerId = 5,
-                    MovieCategory = MovieCategory.Drama
+                    ProducerId = 3,
+                    MovieCategory = MovieCategory.Comedy
                 },
                 new Movie()
                 {
-                    Id = 1013,
                     Name = "Kibar Feyzo",
                     Description = "This is the Kibar Feyzo movie description",
                     Price = 39.50,
@@ -434,8 +406,8 @@ public class AppDbInitializer
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now.AddDays(1110),
                     CinemaId = 1,
-                    ProducerId = 5,
-                    MovieCategory = MovieCategory.Drama
+                    ProducerId = 4,
+                    MovieCategory = MovieCategory.Comedy
                 },
             });
             context.SaveChanges();
@@ -446,72 +418,71 @@ public class AppDbInitializer
         {
             context.Actors_Movies.AddRange(new List<Actor_Movie>()
                 {
-                    new Actor_Movie() { MovieId = 1, ActorId = 3},
-                    new Actor_Movie() { MovieId = 2, ActorId = 1},
-                    new Actor_Movie() { MovieId = 2, ActorId = 5},
-                    new Actor_Movie() { MovieId = 2, ActorId = 1005},
-                    new Actor_Movie() { MovieId = 2, ActorId = 1006},
-                    new Actor_Movie() { MovieId = 2, ActorId = 1014},
-                    new Actor_Movie() { MovieId = 5, ActorId = 2},
-                    new Actor_Movie() { MovieId = 6, ActorId = 5},
-                    new Actor_Movie() { MovieId = 6, ActorId = 1004},
-                    new Actor_Movie() { MovieId = 6, ActorId = 1005},
-                    new Actor_Movie() { MovieId = 6, ActorId = 1006},
-                    new Actor_Movie() { MovieId = 1003, ActorId = 1},
-                    new Actor_Movie() { MovieId = 1003, ActorId = 1004},
-                    new Actor_Movie() { MovieId = 1003, ActorId = 1014},
-                    new Actor_Movie() { MovieId = 1003, ActorId = 1019},
-                    new Actor_Movie() { MovieId = 1003, ActorId = 1022},
-                    new Actor_Movie() { MovieId = 1004, ActorId = 1018},
-                    new Actor_Movie() { MovieId = 1004, ActorId = 1021},
-                    new Actor_Movie() { MovieId = 1005, ActorId = 1},
-                    new Actor_Movie() { MovieId = 1005, ActorId = 5},
-                    new Actor_Movie() { MovieId = 1005, ActorId = 1006},
-                    new Actor_Movie() { MovieId = 1005, ActorId = 1007},
-                    new Actor_Movie() { MovieId = 1006, ActorId = 5},
-                    new Actor_Movie() { MovieId = 1006, ActorId = 1004},
-                    new Actor_Movie() { MovieId = 1006, ActorId = 1005},
-                    new Actor_Movie() { MovieId = 1006, ActorId = 1006},
-                    new Actor_Movie() { MovieId = 1006, ActorId = 1014},
-                    new Actor_Movie() { MovieId = 1007, ActorId = 2},
-                    new Actor_Movie() { MovieId = 1007, ActorId = 5},
-                    new Actor_Movie() { MovieId = 1007, ActorId = 1004},
-                    new Actor_Movie() { MovieId = 1007, ActorId = 1005},
-                    new Actor_Movie() { MovieId = 1007, ActorId = 1006},
-                    new Actor_Movie() { MovieId = 1007, ActorId = 1014},
-                    new Actor_Movie() { MovieId = 1008, ActorId = 1},
-                    new Actor_Movie() { MovieId = 1008, ActorId = 2},
-                    new Actor_Movie() { MovieId = 1008, ActorId = 1004},
-                    new Actor_Movie() { MovieId = 1008, ActorId = 1005},
-                    new Actor_Movie() { MovieId = 1008, ActorId = 1014},
-                    new Actor_Movie() { MovieId = 1008, ActorId = 1019},
-                    new Actor_Movie() { MovieId = 1008, ActorId = 1022},
-                    new Actor_Movie() { MovieId = 1009, ActorId = 1},
-                    new Actor_Movie() { MovieId = 1009, ActorId = 2},
-                    new Actor_Movie() { MovieId = 1009, ActorId = 1005},
-                    new Actor_Movie() { MovieId = 1009, ActorId = 1014},
-                    new Actor_Movie() { MovieId = 1009, ActorId = 1019},
-                    new Actor_Movie() { MovieId = 1010, ActorId = 1},
-                    new Actor_Movie() { MovieId = 1010, ActorId = 2},
-                    new Actor_Movie() { MovieId = 1010, ActorId = 5},
-                    new Actor_Movie() { MovieId = 1010, ActorId = 1004},
-                    new Actor_Movie() { MovieId = 1010, ActorId = 1005},
-                    new Actor_Movie() { MovieId = 1010, ActorId = 1006},
-                    new Actor_Movie() { MovieId = 1010, ActorId = 1014},
-                    new Actor_Movie() { MovieId = 1011, ActorId = 1},
-                    new Actor_Movie() { MovieId = 1011, ActorId = 5},
-                    new Actor_Movie() { MovieId = 1011, ActorId = 1005},
-                    new Actor_Movie() { MovieId = 1011, ActorId = 1006},
-                    new Actor_Movie() { MovieId = 1012, ActorId = 1},
-                    new Actor_Movie() { MovieId = 1012, ActorId = 5},
-                    new Actor_Movie() { MovieId = 1012, ActorId = 1005},
-                    new Actor_Movie() { MovieId = 1012, ActorId = 1006},
-                    new Actor_Movie() { MovieId = 1012, ActorId = 1014},
-                    new Actor_Movie() { MovieId = 1013, ActorId = 1},
-                    new Actor_Movie() { MovieId = 1013, ActorId = 5},
-                    new Actor_Movie() { MovieId = 1013, ActorId = 1005},
-                    new Actor_Movie() { MovieId = 1013, ActorId = 1017},
-
+                    new Actor_Movie() { MovieId = 1, ActorId = 3 },
+                    new Actor_Movie() { MovieId = 2, ActorId = 1 },
+                    new Actor_Movie() { MovieId = 2, ActorId = 4 },
+                    new Actor_Movie() { MovieId = 2, ActorId = 6 },
+                    new Actor_Movie() { MovieId = 2, ActorId = 7 },
+                    new Actor_Movie() { MovieId = 2, ActorId = 8 },
+                    new Actor_Movie() { MovieId = 3, ActorId = 2 },
+                    new Actor_Movie() { MovieId = 4, ActorId = 4 },
+                    new Actor_Movie() { MovieId = 4, ActorId = 5 },
+                    new Actor_Movie() { MovieId = 4, ActorId = 6 },
+                    new Actor_Movie() { MovieId = 4, ActorId = 7 },
+                    new Actor_Movie() { MovieId = 5, ActorId = 1 },
+                    new Actor_Movie() { MovieId = 5, ActorId = 5 },
+                    new Actor_Movie() { MovieId = 5, ActorId = 8 },
+                    new Actor_Movie() { MovieId = 5, ActorId = 11 },
+                    new Actor_Movie() { MovieId = 5, ActorId = 13 },
+                    new Actor_Movie() { MovieId = 6, ActorId = 10 },
+                    new Actor_Movie() { MovieId = 6, ActorId = 12 },
+                    new Actor_Movie() { MovieId = 7, ActorId = 1 },
+                    new Actor_Movie() { MovieId = 7, ActorId = 4 },
+                    new Actor_Movie() { MovieId = 7, ActorId = 7 },
+                    new Actor_Movie() { MovieId = 7, ActorId = 9 },
+                    new Actor_Movie() { MovieId = 8, ActorId = 4 },
+                    new Actor_Movie() { MovieId = 8, ActorId = 5 },
+                    new Actor_Movie() { MovieId = 8, ActorId = 6 },
+                    new Actor_Movie() { MovieId = 8, ActorId = 7 },
+                    new Actor_Movie() { MovieId = 8, ActorId = 8 },
+                    new Actor_Movie() { MovieId = 9, ActorId = 2 },
+                    new Actor_Movie() { MovieId = 9, ActorId = 4 },
+                    new Actor_Movie() { MovieId = 9, ActorId = 5 },
+                    new Actor_Movie() { MovieId = 9, ActorId = 6 },
+                    new Actor_Movie() { MovieId = 9, ActorId = 7 },
+                    new Actor_Movie() { MovieId = 9, ActorId = 8 },
+                    new Actor_Movie() { MovieId = 10, ActorId = 1 },
+                    new Actor_Movie() { MovieId = 10, ActorId = 2 },
+                    new Actor_Movie() { MovieId = 10, ActorId = 5 },
+                    new Actor_Movie() { MovieId = 10, ActorId = 6 },
+                    new Actor_Movie() { MovieId = 10, ActorId = 8 },
+                    new Actor_Movie() { MovieId = 10, ActorId = 11 },
+                    new Actor_Movie() { MovieId = 10, ActorId = 13 },
+                    new Actor_Movie() { MovieId = 11, ActorId = 1 },
+                    new Actor_Movie() { MovieId = 11, ActorId = 2 },
+                    new Actor_Movie() { MovieId = 11, ActorId = 6 },
+                    new Actor_Movie() { MovieId = 11, ActorId = 8 },
+                    new Actor_Movie() { MovieId = 11, ActorId = 11 },
+                    new Actor_Movie() { MovieId = 12, ActorId = 1 },
+                    new Actor_Movie() { MovieId = 12, ActorId = 2 },
+                    new Actor_Movie() { MovieId = 12, ActorId = 4 },
+                    new Actor_Movie() { MovieId = 12, ActorId = 5 },
+                    new Actor_Movie() { MovieId = 12, ActorId = 6 },
+                    new Actor_Movie() { MovieId = 12, ActorId = 7 },
+                    new Actor_Movie() { MovieId = 12, ActorId = 8 },
+                    new Actor_Movie() { MovieId = 13, ActorId = 1 },
+                    new Actor_Movie() { MovieId = 13, ActorId = 4 },
+                    new Actor_Movie() { MovieId = 13, ActorId = 6 },
+                    new Actor_Movie() { MovieId = 13, ActorId = 7 },
+                    new Actor_Movie() { MovieId = 14, ActorId = 1 },
+                    new Actor_Movie() { MovieId = 14, ActorId = 4 },
+                    new Actor_Movie() { MovieId = 14, ActorId = 6 },
+                    new Actor_Movie() { MovieId = 14, ActorId = 7 },
+                    new Actor_Movie() { MovieId = 14, ActorId = 8 },
+                    new Actor_Movie() { MovieId = 15, ActorId = 1 },
+                    new Actor_Movie() { MovieId = 15, ActorId = 4 },
+                    new Actor_Movie() { MovieId = 15, ActorId = 6 },
+                    new Actor_Movie() { MovieId = 15, ActorId = 9 },
                 });
             context.SaveChanges();
         }

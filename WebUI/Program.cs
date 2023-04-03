@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnectionString")));
 
 builder.Services.AddScoped<IActorsService, ActorsService>();
 builder.Services.AddScoped<IProducersService, ProducersService>();
@@ -56,7 +56,7 @@ app.MapControllerRoute(
     pattern: "{controller=Movies}/{action=Index}/{id?}");
 
 // Open these two lines below only first time you run the application. They will create some data. 
-// AppDbInitializer.Seed(app);
-// AppDbInitializer.SeedUsersAndRolesAsync(app).Wait();
+AppDbInitializer.Seed(app);
+AppDbInitializer.SeedUsersAndRolesAsync(app).Wait();
 
 app.Run();
