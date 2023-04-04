@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Models.Identity;
+using Microsoft.AspNetCore.Mvc; 
 using Models.ViewModels; 
 using Service.Abstract; 
 using System.Security.Claims;

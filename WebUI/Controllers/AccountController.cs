@@ -93,6 +93,7 @@ public class AccountController : Controller
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
+        HttpContext.Session.Clear();
         return RedirectToAction("Index", "Movies");
     }
 

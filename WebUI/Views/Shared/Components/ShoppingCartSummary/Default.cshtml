@@ -1,6 +1,6 @@
 ﻿@model int
 
-@if (Model > 0)
+@if (User.Identity.IsAuthenticated)
 {
     <li class="nav-item">
         <a class="nav-link text-dark" asp-controller="Orders" asp-action="ShoppingCart">

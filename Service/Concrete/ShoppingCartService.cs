@@ -1,7 +1,6 @@
 ﻿using DataAccess.Data;
 using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore; 
 using Models.Entities;
 using Service.Abstract;
 
@@ -10,20 +9,24 @@ namespace Service.Concrete;
 public class ShoppingCartService : IShoppingCartService
 {
     private readonly AppDbContext _context;
+    private readonly IHttpContextAccessor _httpContextAccessor;
     public ShoppingCart ShoppingCart { get; set; } = new();
-    public ShoppingCartService(AppDbContext context)
-    { 
+
+    public ShoppingCartService(AppDbContext context, IHttpContextAccessor httpContextAccessor)
+    {
         _context = context;
+        _httpContextAccessor = httpContextAccessor;
+        ShoppingCart = GetShoppingCart();
     }
 
-    public static ShoppingCart GetShoppingCart(IServiceProvider services)
+    private ShoppingCart GetShoppingCart()
     {
-        ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
+        ISession session = _httpContextAccessor.HttpContext.Session;
         string cartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();
         session.SetString("CartId", cartId);
 
         return new ShoppingCart() { Id = cartId };
-    }
+    } 
 
     public void AddItemToCart(Movie movie)
     {
@@ -87,6 +90,8 @@ public class ShoppingCartService : IShoppingCartService
             .ToListAsync();
         _context.ShoppingCartItems.RemoveRange(items);
         await _context.SaveChangesAsync();
+
+        ShoppingCart.ShoppingCartItems.Clear();
     }
 }
 

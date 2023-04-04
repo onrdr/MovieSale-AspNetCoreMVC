@@ -63,8 +63,11 @@ public class MoviesController : Controller
 
         if (!string.IsNullOrEmpty(searchString))
         {
-            var filteredResult = allMovies.Where(m => m.Name.Contains(searchString) || 
-                                                      m.Description.Contains(searchString)).ToList();
+            var filteredResult = allMovies
+                .Where(m => m.Name.ToLower().Contains(searchString) 
+                         || m.Description.ToLower().Contains(searchString))
+                .ToList();
+
             return View(nameof(Index), filteredResult);
         }
 
