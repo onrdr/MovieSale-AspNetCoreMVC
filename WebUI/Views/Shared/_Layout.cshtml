@@ -40,9 +40,8 @@
 
                     </ul>
                     <form class="form-inline my-2 my-lg-0 d-flex" asp-controller="Movies" asp-action="Filter">
-                        <input name="searchString" type="text" class="form-control" placeholder="Search for a movie..."
+                        <input id="searchString" name="searchString" type="text" class="form-control" placeholder="Search for a movie..."
                                aria-label="Recipient's username" aria-describedby="button-addon2">&nbsp
-                        <button class="btn btn-outline-success my-2 my-sm-0 ml-auto" type="submit"><i class="bi bi-search"></i></button>
                     </form>
 
                     <ul class="navbar-nav">
@@ -54,6 +53,8 @@
             </div>
         </nav>
     </header>
+
+    <div id="searchResults"></div>
 
     <div class="container">
         <main role="main" class="pb-3">
@@ -71,5 +72,26 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+            $('#searchString').keyup(function () {
+                var searchString = $('#searchString').val().toLowerCase();
+
+                if (searchString.length > 0) {
+                    $.ajax({
+                        url: "/Movies/Search",
+                        data: { searchString: searchString },
+                        success: function (data) {
+                            $('#searchResults').html(data);
+                        }
+                    });
+                }
+                else {
+                    $('#searchResults').html('');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
