@@ -16,6 +16,7 @@ The admin page is accessible only to admin users. Admin users can perform CRUD o
 
 # Technologies Used
 - ASP.NET Core 6 MVC
+- EF Core
 - SQLite
 - JavaScript
 - JQuery
