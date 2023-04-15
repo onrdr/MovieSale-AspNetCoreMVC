@@ -32,6 +32,10 @@ public class OrdersController : Controller
     public IActionResult ShoppingCart()
     {
         var items = _shoppingCartService.GetShoppingCartItems();
+
+        if(!items.Any())
+            return RedirectToAction(nameof(Index));
+
         _shoppingCartService.ShoppingCart.ShoppingCartItems = items;
 
         var response = new ShoppingCartVM()
