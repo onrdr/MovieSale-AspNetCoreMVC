@@ -54,18 +54,24 @@ public class MoviesController : Controller
         var allMovies = await _service.GetAllAsync(m => m.Cinema);
 
         return View(allMovies);
-    } 
+    }
 
     [AllowAnonymous]
-    public async Task<ActionResult> Search(string searchString)
+    public async Task<ActionResult> Filter(string searchString)
     {
         var allMovies = await _service.GetAllAsync(m => m.Cinema);
 
-        var filteredResult = allMovies
-            .Where(m => m.Name.ToLower().Contains(searchString))
-            .ToList();
+        if (!string.IsNullOrEmpty(searchString))
+        {
+            var filteredResult = allMovies
+                .Where(m => m.Name.ToLower().Contains(searchString.ToLower())
+                         || m.Description.ToLower().Contains(searchString.ToLower()))
+                .ToList();
 
-        return PartialView("_SearchResults", filteredResult);
+            return View(nameof(Index), filteredResult);
+        }
+
+        return View(nameof(Index), allMovies);
     }
 
     [AllowAnonymous]
