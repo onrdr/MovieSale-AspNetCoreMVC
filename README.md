@@ -35,7 +35,7 @@ To run this application, you will need to have .NET and Docker installed on your
 
 ### 2- Navigate to the API Directory
 ```
- cd eCommerce-AspNetCore-MVC
+ cd MovieSale-AspNetCoreMVC
 ``` 
 
 ### 3- Build the docker image
