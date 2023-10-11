@@ -30,7 +30,7 @@ To run this application, you will need to have .NET and Docker installed on your
 
 ### 1- Clone the repository
 ```
- git clone https://github.com/onrdr/eCommerce-AspNetCore-MVC
+ git clone https://github.com/onrdr/MovieSale-AspNetCoreMVC
 ```
 
 ### 2- Navigate to the API Directory
